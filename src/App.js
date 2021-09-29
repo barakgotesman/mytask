@@ -1,24 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+// import Login from './componnents/login/login';
+import LoginV2 from './componnents/loginv2/loginv2';
+import LoginSuccess from './componnents/LoginSuccess/LoginSuccess';
+import { useState } from 'react';
 
 function App() {
+
+  const [page, setPage] = useState(1)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {
+      // page === 1 ? <Login setPage={setPage} /> : null
+      page === 1 ? <LoginV2 setPage={setPage} /> : null
+    }
+    {
+      page === 2 ? <LoginSuccess setPage={setPage} /> : null
+
+    }
+    </>
   );
 }
 

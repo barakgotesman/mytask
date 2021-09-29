@@ -1,0 +1,156 @@
+form, input{
+    text-align: right;
+}
+
+
+input:focus{
+    outline-style: none;
+}
+
+label{
+    color:#1B26B6;
+    font-size: 14px;
+    text-align: right;
+}
+
+#cloud1, #cloud2, #cloud3{
+    position: absolute;
+}
+#cloud2{
+left: 46px;
+top: 32.5px;
+}
+#cloud3{
+    right: 28px;
+    bottom:48px;
+}
+.container{
+    min-height: 100% !important;
+}
+#background{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    z-index: -1;
+    background: url('./images/background.svg') no-repeat bottom center;
+    min-height:360px;
+    width:100%;
+    object-fit:cover;
+}
+
+#cloud1{
+    top:47px;
+    right: 28px;
+}
+.loginBox{
+    font-family: 'Assistant', sans-serif;
+    position: relative;
+}
+
+.label, .input, h1{
+    display: block;
+}
+
+span{
+    font-family:  'Assistant-SemiBold',  sans-serif;
+}
+span,h1{
+    text-align:center;
+    display: block;
+}
+
+
+.input{
+    border-bottom: 1px solid #1B26B6 !important;
+    padding: 5px;
+    font-size: 20px;
+    width: 100%;
+    border: 0px;
+    background: transparent;
+    color:#1B26B6;
+}
+
+.button{
+    border-radius: 25px;
+    padding:10px;
+    background-color: #1B26B6;
+    margin-top: 30px;
+    border: 0px;
+    width: 100%;
+    color:#FFFFFF;
+    
+}
+
+.loginBox{
+    margin: auto;
+    width:80%;
+    margin-bottom: 141px;
+    margin-top:181px;
+
+    //desktop
+    @media screen and (min-width: 768px) {
+        z-index:3;
+        width: 40%;
+        background-color: #FFFFFF;
+        height: 100vh;
+        border-radius: 24px 24px 0px 10px;
+        box-shadow: 0px -4px 24px rgba(47,73,166,0.06);
+        margin-top: 82px;
+        margin-right: 62px;
+        padding-right: 68px;
+        padding-left: 68px;
+
+        h1{
+            padding-top: 157px;
+        }
+
+    }
+}
+
+.container{
+    min-height: 700px !important;
+}
+
+// Images for desktop
+#leftBottomCloud, #group4images{
+    display: none;
+}
+
+// desktop only 
+@media screen and (min-width: 768px) {
+
+        // show and hide clouds
+        #group4images, #leftBottomCloud{
+            display: block;
+        }
+
+        // hide images of mobile only
+        #cloud1, #cloud2, #cloud3, #background{
+            display: none;
+        }
+
+        #leftBottomCloud{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            height: 482px;
+        }
+
+        #group4images{
+            position: absolute;
+            left: 20%;
+            top:30%;
+        }
+
+
+
+}
+
+
+
+
+.loginBox{
+    &-form{
+
+    }
+}
